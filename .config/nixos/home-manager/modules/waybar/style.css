@@ -1,0 +1,150 @@
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-right: 8px;
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    background: @surface0;
+}
+
+#workspaces button {
+    transition: none;
+    color: @subtext0;
+    background: transparent;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#workspaces button.persistent {
+    color: @subtext0;
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: @surface0;
+    background: @text;
+}
+
+#workspaces button.active {
+    background: @surface2;
+    color: @text;
+    border-radius: inherit;
+}
+
+#language {
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#clock {
+    border-radius: 0 0 6px 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#pulseaudio {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#custom-mem {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#cpu {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#temperature {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0 0 6px 6px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+@keyframes blink {
+    to {
+        background-color: @text;
+        color: @crust;
+    }
+}
